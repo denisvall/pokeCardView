@@ -1,0 +1,96 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated_blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --dark-light: hsl(0, 1%, 29%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--dark-cyan);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url('../img/bg-pattern-top.svg'), url('../img/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.9);
+    // card-header
+    &-header {
+        display: block;
+        width: 100%;
+    }
+    //card-body
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.223);
+        //card-body-img
+        &-img {
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: calc(-100px - 5px);
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            // object-fit: contain;
+        }
+        &-title {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            span {
+                color: var(--dark-gray);
+                font-weight: 400;
+                // text-transform: uppercase;
+            }
+        }
+        &-text {
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+        }
+    }
+    //card-footer
+    &-footer {
+        display: flex;
+        justify-content: space-around;
+        //card-footer-social
+        &-social {
+            text-align: center;
+            // margin-top: 1rem;
+            // margin-bottom: 1.8rem;
+            // font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--dark-light);
+            p {
+                letter-spacing: 1px;
+                color: var(--dark-gray);
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
